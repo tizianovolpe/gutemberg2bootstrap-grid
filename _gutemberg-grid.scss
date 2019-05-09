@@ -1,0 +1,100 @@
+/*
+
+RESET
+
+*/
+
+
+@media (min-width: 600px){
+.wp-block-column:nth-child(odd) {
+    margin-right: initial;
+}
+}
+
+@media (min-width: 600px){
+.wp-block-column:not(:last-child) {
+    margin-right: initial;
+}
+}
+
+@media (min-width: 600px){
+.wp-block-column {
+    //flex-basis: 50%;
+    //flex-grow: 0;
+}
+}
+
+
+.wp-block-column {
+    flex: initial;
+    margin-bottom: inherit;
+    //flex-basis: 100%;
+    min-width: inherit;
+    //word-break: break-word;
+    //overflow-wrap: break-word;
+}
+
+
+@media (min-width: 782px){
+.wp-block-columns {
+    //flex-wrap: nowrap;
+}
+}
+
+.wp-block-columns {
+    //display: inherit;
+    //flex-wrap: wrap;
+}
+
+
+@media (min-width: 600px){
+.wp-block-column:not(:first-child) {
+    margin-left: initial;
+}
+}
+
+
+/*
+
+CONVERT GRID
+
+*/
+
+
+.wp-block-columns {
+    @extend .row;
+    
+    .wp-block-column {
+        box-sizing: border-box;
+    }
+    
+    &.has-2-columns {
+        .wp-block-column {
+            @extend .col-sm-6;
+        }        
+    }
+    
+    &.has-3-columns {
+        .wp-block-column {
+            @extend .col-sm-4;
+        }        
+    }
+    
+    &.has-4-columns {
+        .wp-block-column {
+            @extend .col-sm-3;
+        }        
+    }
+    
+    &.has-5-columns {
+        .wp-block-column {
+            @extend .col-sm-2;
+        }        
+    }
+    
+    &.has-6-columns {
+        .wp-block-column {
+            @extend .col-sm-2;
+        }        
+    }
+}
